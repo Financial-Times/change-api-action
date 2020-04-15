@@ -33,7 +33,7 @@ async function main() {
       data.extraProperties = extraProperties;
     }
 
-    if (process.env.GITHUB_REF) {
+    if (payload.release && payload.release.tag_name) {
       data.gitReleaseTag = payload.release.tag_name;
     }
 
