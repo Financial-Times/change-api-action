@@ -25,7 +25,7 @@ async function main() {
       environment,
       gitRepositoryName: payload.repository.full_name,
       changeMadeBySystem: "github",
-      commit: payload.head || payload.release.tag_name,
+      commit: payload.after || payload.release.tag_name,
     };
 
     if (extraProperties) {
