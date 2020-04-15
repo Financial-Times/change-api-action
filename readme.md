@@ -39,15 +39,12 @@ jobs:
           # Optional
           # Enter comma-separated list of Slack channel names for notifications.
           slack-channels: "ft-changes-test,origami-deploys"
-          # Optional
-          extra-properties: 
-            jake: "yeahh"
 ```
 
 You can do this by running the following command from a repo:
 
 ```bash
-mkdir -p .github/workflows && curl https://raw.githubusercontent.com/Financial-Times/change-api-action/v1.0.0/example.yml --output .github/workflows/change-api.yml
+mkdir -p .github/workflows && curl https://raw.githubusercontent.com/Financial-Times/change-api-action/v1/example.yml --output .github/workflows/change-api.yml
 ```
 
 
