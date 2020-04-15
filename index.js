@@ -17,6 +17,7 @@ async function main() {
     const slackChannels = core.getInput("slack-channels");
     const extraProperties = core.getInput("extra-properties");
 
+    console.log(payload);
     const data = {
       user: {
         githubName: payload.sender.login
