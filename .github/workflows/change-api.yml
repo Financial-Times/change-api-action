@@ -1,5 +1,4 @@
-on:
-  release: [created]
+on: [push]
 
 jobs:
   make-change-log:
@@ -17,13 +16,10 @@ jobs:
           change-api-key: ${{ secrets.CHANGE_API_KEY }}
           # Required
           # Enter the systemcode of the system being changed.
-          system-code: "jake"
+          system-code: "origami"
           # Required
           # Enter the environment in which the system is being changed.
-          environment: prod
+          environment: test
           # Optional
           # Enter comma-separated list of Slack channel names for notifications.
           slack-channels: "ft-changes-test,origami-deploys"
-          # Optional
-          extra-properties: 
-            jake: "yeahh"
