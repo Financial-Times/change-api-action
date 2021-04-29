@@ -18,15 +18,16 @@ async function main() {
     const extraProperties = core.getInput("extra-properties");
 
     const data = {
-      user: {
-        githubName: payload.sender.login
-      },
       systemCode,
       environment,
       gitRepositoryName: payload.repository.full_name,
       changeMadeBySystem: "github",
       commit: payload.after,
     };
+
+    if (payload && payload.sender && payload.sender.login) {
+      data.user.githubName = payload.sender.login;
+    }
 
     if (extraProperties) {
       data.extraProperties = extraProperties;
