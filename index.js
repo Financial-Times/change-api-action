@@ -26,6 +26,7 @@ async function main() {
     };
 
     if (payload && payload.sender && payload.sender.login) {
+      data.user = {};
       data.user.githubName = payload.sender.login;
     }
 
