@@ -20,7 +20,6 @@ async function main() {
     const data = {
       systemCode,
       environment,
-      gitRepositoryName: payload.repository.full_name,
       changeMadeBySystem: "github",
       commit: payload.after,
     };
@@ -28,6 +27,10 @@ async function main() {
     if (payload && payload.sender && payload.sender.login) {
       data.user = {};
       data.user.githubName = payload.sender.login;
+    }
+
+    if (payload && payload.repository && payload.repository.full_name) {
+      data.gitRepositoryName = payload.repository.full_name;
     }
 
     if (extraProperties) {
