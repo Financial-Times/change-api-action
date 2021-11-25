@@ -9,7 +9,7 @@
   "author": "Jake Champion <me@jakechampion.name>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.6"
+    "@actions/core": "^1.6.0"
   },
   "main": "index.js",
   "repository": {
